@@ -9,7 +9,7 @@ export default function Hero() {
       <div className={styles.hero}>
         <span>👏 Olá, Pessoal!</span>
         <h1>
-          Bem-vindos à página da ONG <br /> <span>Leitura Solidária</span>
+          Bem-vindos à página da ONG <br /> <span>Literatura Solidária</span>
         </h1>
         <p>
           Uma organização sem fins lucrativos que tem como missão promover o
