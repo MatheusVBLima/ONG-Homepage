@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Form.module.scss";
 
 export default function Form() {
+  const [livros, setLivros] = useState("");
+
+  function handleLivrosChange(event: React.ChangeEvent<HTMLInputElement>) {
+    const novoValor = event.target.value;
+    if (Number(novoValor) >= 0) {
+      setLivros(novoValor);
+    }
+  }
   return (
     <div className={styles.wrapper}>
       <h2>Preencha o formulário e doe livros!</h2>
@@ -14,9 +22,12 @@ export default function Form() {
           required
         />
         <input
-          type='number'
-          name='email'
+          type='text'
+          name='livros'
           placeholder='Quantidade de livros'
+          pattern='[0-9]*'
+          value={livros.toString()}
+          onChange={handleLivrosChange}
           required
         />
         <button type='submit'>Enviar</button>
