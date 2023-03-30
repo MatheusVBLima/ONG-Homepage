@@ -7,13 +7,13 @@ export default function Hero() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.hero}>
-        <span>👏 Olá, Pessoa!</span>
+        <span>👏 Olá, Pessoal!</span>
         <h1>
-          Lorem ipsum dolor sit. <br /> <span>Lorem, ipsum.</span>
+          Bem-vindos à página da ONG <br /> <span>Leitura Solidária</span>
         </h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
-          nulla? <br />
+          Uma organização sem fins lucrativos que tem como missão promover o
+          acesso à leitura e à educação para todos. <br />
         </p>
       </div>
       <Image src={avatar} alt='avatar' width={450} height={521} />

@@ -30,14 +30,14 @@ export function Header() {
   return (
     <header className={styles.headerContainer}>
       <div className={styles.headerContent}>
-        <span>LOGO ONG</span>
+        <span>Literatura Solidária</span>
         <nav>
           <a
             href='#home'
             className={isHomeActive ? styles.active : ""}
             onClick={handleIsHomeActive}
           >
-            Home
+            Início
           </a>
           <a
             href='#quem-somos'

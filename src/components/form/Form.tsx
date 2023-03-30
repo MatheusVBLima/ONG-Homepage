@@ -4,7 +4,7 @@ import styles from "./Form.module.scss";
 export default function Form() {
   return (
     <div className={styles.wrapper}>
-      <h2>Preencha o formulário e nos ajude!</h2>
+      <h2>Preencha o formulário e doe livros!</h2>
       <form action='https://formsubmit.co/your@email.com' method='POST'>
         <input type='text' name='name' placeholder='Nome' required />
         <input
