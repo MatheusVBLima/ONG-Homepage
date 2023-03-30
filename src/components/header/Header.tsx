@@ -5,10 +5,26 @@ import { useState } from "react";
 import Link from "next/link";
 
 export function Header() {
-  const [isActive, setIsActive] = useState(true);
+  const [isHomeActive, setIsHomeActive] = useState(true);
+  const [isAboutActive, setIsAboutActive] = useState(false);
+  const [isFormActive, setIsFormActive] = useState(false);
 
-  function handleIsActive(newIsActive: boolean) {
-    setIsActive(newIsActive);
+  function handleIsHomeActive() {
+    setIsHomeActive(true);
+    setIsAboutActive(false);
+    setIsFormActive(false);
+  }
+
+  function handleIsAboutActive() {
+    setIsHomeActive(false);
+    setIsAboutActive(true);
+    setIsFormActive(false);
+  }
+
+  function handleIsFormActive() {
+    setIsHomeActive(false);
+    setIsAboutActive(false);
+    setIsFormActive(true);
   }
 
   return (
@@ -18,20 +34,26 @@ export function Header() {
         <nav>
           <a
             href='#home'
-            className={isActive ? styles.active : ""}
-            onClick={() => handleIsActive(true)}
+            className={isHomeActive ? styles.active : ""}
+            onClick={handleIsHomeActive}
           >
             Home
           </a>
           <a
             href='#quem-somos'
-            className={!isActive ? styles.active : ""}
-            onClick={() => handleIsActive(false)}
+            className={isAboutActive ? styles.active : ""}
+            onClick={handleIsAboutActive}
           >
             Quem Somos
           </a>
         </nav>
-        <a href='#form' className={styles.cta}>
+        <a
+          href='#form'
+          className={
+            isFormActive ? `${styles.active} ${styles.cta}` : styles.cta
+          }
+          onClick={handleIsFormActive}
+        >
           Faça Parte
         </a>
       </div>
