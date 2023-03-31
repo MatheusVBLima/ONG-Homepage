@@ -50,3 +50,11 @@
     }
   }
 }
+
+@media screen and (max-width: 1080px) {
+  .wrapper {
+    form {
+      width: 100%;
+    }
+  }
+}

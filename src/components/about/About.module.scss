@@ -10,6 +10,8 @@
   justify-content: center;
   gap: 5rem;
 
+  font-family: "Lobster", cursive;
+
   h2 {
     font-size: 2rem;
     font-weight: bold;
@@ -17,8 +19,26 @@
   }
 
   p {
-    font-size: 1.25rem;
+    font-size: 1.75rem;
     text-align: justify;
     line-height: 1.5;
+
+    &::before {
+      content: "A";
+      font-size: 3rem;
+      color: var(--red-500);
+    }
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .wrapper {
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1.25rem;
+    }
   }
 }

@@ -44,7 +44,6 @@
   }
 }
 
-/* Para telas menores que 768px */
 @media screen and (max-width: 767px) {
   .wrapper {
     flex-direction: column;
@@ -57,6 +56,10 @@
       padding-bottom: 2rem;
       border-bottom: 1px solid #ccc;
 
+      & > span {
+        display: none;
+      }
+
       h1 {
         font-size: 3.5rem;
         line-height: 3.5rem;
@@ -72,7 +75,6 @@
   }
 }
 
-/* Para telas entre 768px e 1023px */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .wrapper {
     flex-direction: column;
@@ -84,6 +86,9 @@
       margin-bottom: 2rem;
       padding-bottom: 2rem;
       border-bottom: 1px solid #ccc;
+      & > span {
+        display: none;
+      }
 
       h1 {
         font-size: 3.5rem;
@@ -95,31 +100,6 @@
         font-size: 1.25rem;
         line-height: 1.75rem;
         margin-top: 1rem;
-      }
-    }
-  }
-}
-
-/* Para telas maiores que 1023px */
-@media screen and (min-width: 1024px) {
-  .wrapper {
-    max-width: 1120px;
-    height: calc(100vh - 5rem);
-
-    .hero {
-      max-width: 600px;
-      text-align: left;
-
-      h1 {
-        font-size: 4.5rem;
-        line-height: 4.5rem;
-        margin-top: 2.5rem;
-      }
-
-      p {
-        font-size: 1.5rem;
-        line-height: 2.25rem;
-        margin-top: 1.5rem;
       }
     }
   }
